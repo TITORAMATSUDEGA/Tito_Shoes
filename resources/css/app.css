@@ -59,3 +59,59 @@
   background-color: var(--user-badge);
   color: #ffffff;
 }
+
+:root {
+  --admin-bg: #eff7f7;
+  --admin-surface: #ffffff;
+  --admin-border: #d9eaed;
+  --admin-text: #1e293b;
+  --admin-muted: #64748b;
+  --admin-accent: #0ea5a2;
+  --admin-accent-hover: #0b8f8d;
+  --admin-soft-accent: #e2f7f6;
+  --admin-badge: #0f766e;
+}
+
+.admin-theme-bg {
+  background-color: var(--admin-bg);
+  background-image: radial-gradient(circle at top right, #f7fcfc 0%, var(--admin-bg) 60%);
+}
+
+.admin-theme-surface {
+  background-color: var(--admin-surface);
+}
+
+.admin-theme-border {
+  border-color: var(--admin-border);
+}
+
+.admin-theme-text {
+  color: var(--admin-text);
+}
+
+.admin-theme-muted {
+  color: var(--admin-muted);
+}
+
+.admin-theme-accent {
+  color: var(--admin-accent);
+}
+
+.admin-theme-soft-accent {
+  background-color: var(--admin-soft-accent);
+  color: var(--admin-accent);
+}
+
+.admin-theme-btn {
+  background-color: var(--admin-accent);
+  color: #ffffff;
+}
+
+.admin-theme-btn:hover {
+  background-color: var(--admin-accent-hover);
+}
+
+.admin-theme-badge {
+  background-color: var(--admin-badge);
+  color: #ffffff;
+}

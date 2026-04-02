@@ -6,18 +6,18 @@
     <title>Admin - Tito Shoes</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-slate-50 font-sans flex h-screen overflow-hidden text-slate-900">
+<body class="admin-theme-bg font-sans flex h-screen overflow-hidden admin-theme-text">
 
     <!-- Desktop Sidebar -->
-    <aside class="w-72 bg-white border-r border-slate-200 flex flex-col hidden lg:flex">
-        <div class="h-20 flex items-center px-8 border-b border-slate-100 mb-4">
-            <h1 class="text-2xl font-black tracking-tight text-slate-800">
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#3CB043] text-white mr-2 shadow-sm">👟</span>
-                Tito<span class="text-[#3CB043]">Shoes</span>
+    <aside class="w-72 admin-theme-surface border-r admin-theme-border flex flex-col hidden lg:flex">
+        <div class="h-20 flex items-center px-8 border-b admin-theme-border mb-4">
+            <h1 class="text-2xl font-black tracking-tight admin-theme-text">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl admin-theme-badge mr-2 shadow-sm">👟</span>
+                Tito<span class="admin-theme-accent">Shoes</span>
             </h1>
         </div>
         
-        <div class="px-4 py-4 uppercase text-[11px] font-bold text-slate-400 tracking-widest px-8">Menu Utama</div>
+        <div class="px-4 py-4 uppercase text-[11px] font-bold admin-theme-muted tracking-widest px-8">Menu Utama</div>
         <nav class="flex-1 px-4 space-y-1">
             <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-800 rounded-xl transition-all duration-200 group">
                 <div class="p-2 rounded-lg bg-slate-100 text-slate-400 group-hover:bg-white group-hover:text-slate-800 transition-colors">
@@ -25,8 +25,8 @@
                 </div>
                 <span class="font-medium">Dashboard</span>
             </a>
-            <a href="/admin" class="flex items-center gap-3 px-4 py-3 bg-[#3CB043]/5 text-[#3CB043] rounded-xl transition-all duration-200 group">
-                <div class="p-2 rounded-lg bg-[#3CB043] text-white shadow-sm shadow-[#3CB043]/20">
+            <a href="/admin" class="flex items-center gap-3 px-4 py-3 admin-theme-soft-accent rounded-xl transition-all duration-200 group">
+                <div class="p-2 rounded-lg admin-theme-btn shadow-sm shadow-cyan-500/20">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                 </div>
                 <span class="font-bold">Katalog Sepatu</span>
@@ -42,7 +42,7 @@
     </aside>
 
     <main class="flex-1 flex flex-col overflow-hidden">
-        <header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-8 z-10 shrink-0">
+        <header class="h-20 admin-theme-surface border-b admin-theme-border flex items-center justify-between px-8 z-10 shrink-0">
             <div class="flex items-center gap-4 lg:hidden">
                 <button class="p-2 text-slate-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -50,8 +50,8 @@
                 <h1 class="text-xl font-bold">TitoShoes</h1>
             </div>
             
-            <div class="hidden md:flex items-center bg-slate-100 rounded-xl px-4 py-2 w-96">
-                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <div class="hidden md:flex items-center admin-theme-soft-accent rounded-xl px-4 py-2 w-96">
+                <svg class="w-5 h-5 admin-theme-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 <input type="text" placeholder="Cari sesuatu..." class="bg-transparent border-none focus:ring-0 text-sm ml-2 w-full">
             </div>
 
@@ -65,7 +65,7 @@
                         <p class="text-sm font-bold text-slate-800 leading-none">Admin Utama</p>
                         <p class="text-[11px] text-slate-400 font-medium mt-1">Super Admin</p>
                     </div>
-                    <div class="w-11 h-11 bg-gradient-to-tr from-[#3CB043] to-green-400 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-sm border-2 border-white">A</div>
+                    <div class="w-11 h-11 bg-gradient-to-tr from-cyan-500 to-teal-400 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-sm border-2 border-white">A</div>
                 </div>
             </div>
         </header>
@@ -73,7 +73,7 @@
         <div class="flex-1 overflow-y-auto p-4 lg:p-8">
             <div class="max-w-7xl mx-auto">
                 @if(session('success'))
-                    <div class="mb-8 flex items-center gap-3 bg-green-50 border border-green-100 text-[#3CB043] px-6 py-4 rounded-2xl shadow-sm animate-fade-in">
+                    <div class="mb-8 flex items-center gap-3 admin-theme-soft-accent border admin-theme-border admin-theme-accent px-6 py-4 rounded-2xl shadow-sm animate-fade-in">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <span class="font-bold tracking-tight">{{ session('success') }}</span>
                     </div>
@@ -84,7 +84,7 @@
                         <h2 class="text-3xl font-black text-slate-800 tracking-tight">Katalog Produk</h2>
                         <p class="text-slate-500 mt-2 font-medium">Kelola dan update inventaris sepatu modern Anda secara real-time.</p>
                     </div>
-                    <a href="{{ route('shoes.create') }}" class="group bg-[#3CB043] hover:bg-[#34993a] text-white px-6 py-3.5 rounded-2xl font-bold shadow-lg shadow-[#3CB043]/20 transition-all duration-300 flex items-center gap-3 hover:-translate-y-1">
+                    <a href="{{ route('shoes.create') }}" class="group admin-theme-btn text-white px-6 py-3.5 rounded-2xl font-bold shadow-lg shadow-cyan-500/20 transition-all duration-300 flex items-center gap-3 hover:-translate-y-1">
                         <div class="bg-white/20 p-1.5 rounded-lg group-hover:bg-white/30 transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                         </div>
@@ -98,10 +98,10 @@
                 @endphp
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                     <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden">
-                        <div class="absolute right-0 bottom-0 w-24 h-24 bg-green-50 rounded-tl-full -mr-8 -mb-8 transition-transform group-hover:scale-110"></div>
+                        <div class="absolute right-0 bottom-0 w-24 h-24 bg-cyan-50 rounded-tl-full -mr-8 -mb-8 transition-transform group-hover:scale-110"></div>
                         <p class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">Total Produk</p>
                         <h3 class="text-4xl font-black text-slate-800">{{ count($shoes) }}</h3>
-                        <p class="text-xs text-green-600 font-bold mt-2 flex items-center gap-1">
+                        <p class="text-xs text-teal-600 font-bold mt-2 flex items-center gap-1">
                             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"></path></svg>
                             Inventaris aktif
                         </p>
@@ -112,7 +112,7 @@
                         <h3 class="text-2xl font-black text-slate-800">
                             {{ $latestShoe ? $latestShoe->name : 'Belum ada produk' }}
                         </h3>
-                        <p class="text-xs text-blue-600 font-bold mt-2">
+                        <p class="text-xs text-cyan-600 font-bold mt-2">
                             {{ $latestShoe && $latestShoe->created_at ? $latestShoe->created_at->format('d M Y') : '—' }}
                         </p>
                     </div>
@@ -164,7 +164,7 @@
                                     </td>
                                     <td class="px-8 py-6 text-right">
                                         <div class="flex items-center justify-end gap-2">
-                                            <a href="{{ route('shoes.edit', $shoe->id) }}" class="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2.5 rounded-xl font-bold transition-all hover:bg-blue-600 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-200">
+                                            <a href="{{ route('shoes.edit', $shoe->id) }}" class="flex items-center gap-2 bg-cyan-50 text-cyan-700 px-4 py-2.5 rounded-xl font-bold transition-all hover:bg-cyan-600 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
                                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                                 Edit
                                             </a>

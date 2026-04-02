@@ -6,17 +6,17 @@
     <title>Admin - Pemesanan</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-slate-50 font-sans flex h-screen overflow-hidden text-slate-900">
+<body class="admin-theme-bg font-sans flex h-screen overflow-hidden admin-theme-text">
 
-    <aside class="w-72 bg-white border-r border-slate-200 flex flex-col hidden lg:flex">
-        <div class="h-20 flex items-center px-8 border-b border-slate-100 mb-4">
-            <h1 class="text-2xl font-black tracking-tight text-slate-800">
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#3CB043] text-white mr-2 shadow-sm">👟</span>
-                Tito<span class="text-[#3CB043]">Shoes</span>
+    <aside class="w-72 admin-theme-surface border-r admin-theme-border flex flex-col hidden lg:flex">
+        <div class="h-20 flex items-center px-8 border-b admin-theme-border mb-4">
+            <h1 class="text-2xl font-black tracking-tight admin-theme-text">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl admin-theme-badge mr-2 shadow-sm">👟</span>
+                Tito<span class="admin-theme-accent">Shoes</span>
             </h1>
         </div>
 
-        <div class="px-4 py-4 uppercase text-[11px] font-bold text-slate-400 tracking-widest px-8">Menu Utama</div>
+        <div class="px-4 py-4 uppercase text-[11px] font-bold admin-theme-muted tracking-widest px-8">Menu Utama</div>
         <nav class="flex-1 px-4 space-y-1">
             <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 hover:text-slate-800 rounded-xl transition-all duration-200 group">
                 <div class="p-2 rounded-lg bg-slate-100 text-slate-400 group-hover:bg-white group-hover:text-slate-800 transition-colors">
@@ -30,8 +30,8 @@
                 </div>
                 <span class="font-medium">Katalog Sepatu</span>
             </a>
-            <a href="{{ route('admin.orders') }}" class="flex items-center gap-3 px-4 py-3 bg-[#3CB043]/5 text-[#3CB043] rounded-xl transition-all duration-200 group">
-                <div class="p-2 rounded-lg bg-[#3CB043] text-white shadow-sm shadow-[#3CB043]/20">
+            <a href="{{ route('admin.orders') }}" class="flex items-center gap-3 px-4 py-3 admin-theme-soft-accent rounded-xl transition-all duration-200 group">
+                <div class="p-2 rounded-lg admin-theme-btn text-white shadow-sm shadow-cyan-500/20">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                 </div>
                 <span class="font-bold">Pemesanan</span>
@@ -40,7 +40,7 @@
     </aside>
 
     <main class="flex-1 flex flex-col overflow-hidden">
-        <header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-8 z-10 shrink-0">
+        <header class="h-20 admin-theme-surface border-b admin-theme-border flex items-center justify-between px-8 z-10 shrink-0">
             <div class="flex items-center gap-4 lg:hidden">
                 <button class="p-2 text-slate-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -55,7 +55,7 @@
                     <p class="text-sm font-bold text-slate-800 leading-none">Admin Utama</p>
                     <p class="text-[11px] text-slate-400 font-medium mt-1">Super Admin</p>
                 </div>
-                <div class="w-11 h-11 bg-gradient-to-tr from-[#3CB043] to-green-400 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-sm border-2 border-white">A</div>
+                <div class="w-11 h-11 bg-gradient-to-tr from-cyan-500 to-teal-400 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-sm border-2 border-white">A</div>
             </div>
         </header>
 
@@ -71,7 +71,7 @@
                             <h4 class="font-bold text-slate-800">Daftar Pesanan</h4>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Pesanan tercatat otomatis saat customer menekan checkout via WhatsApp.</p>
                         </div>
-                        <span class="inline-flex items-center rounded-lg bg-[#3CB043]/10 text-[#2f8d3a] px-3 py-1 text-xs font-bold">{{ $orderCollection->count() }} pesanan</span>
+                        <span class="inline-flex items-center rounded-lg admin-theme-soft-accent px-3 py-1 text-xs font-bold">{{ $orderCollection->count() }} pesanan</span>
                     </div>
 
                     @if($orderCollection->isEmpty())
