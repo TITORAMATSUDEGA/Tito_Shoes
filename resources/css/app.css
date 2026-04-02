@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #3CB043;
+}
+
+:root {
+  --user-bg: #edf8f5;
+  --user-surface: #ffffff;
+  --user-border: #d7ece5;
+  --user-text: #1f2a37;
+  --user-muted: #5f7385;
+  --user-accent: #0ea5a2;
+  --user-accent-hover: #0b8f8c;
+  --user-soft-accent: #e2f7f5;
+  --user-badge: #f97316;
+}
+
+.user-theme-bg {
+  background-color: var(--user-bg);
+  background-image: linear-gradient(180deg, #f5fcfa 0%, var(--user-bg) 100%);
+}
+
+.user-theme-surface {
+  background-color: var(--user-surface);
+}
+
+.user-theme-border {
+  border-color: var(--user-border);
+}
+
+.user-theme-text {
+  color: var(--user-text);
+}
+
+.user-theme-muted {
+  color: var(--user-muted);
+}
+
+.user-theme-accent {
+  color: var(--user-accent);
+}
+
+.user-theme-soft-accent {
+  background-color: var(--user-soft-accent);
+  color: var(--user-accent);
+}
+
+.user-theme-btn {
+  background-color: var(--user-accent);
+  color: #ffffff;
+}
+
+.user-theme-btn:hover {
+  background-color: var(--user-accent-hover);
+}
+
+.user-theme-badge {
+  background-color: var(--user-badge);
+  color: #ffffff;
+}
